@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <link href="bootstrap.min.css.map" rel="stylesheet" />
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="all.css" rel="stylesheet" />
+    <link href="bootstrap-iconpicker.min.css" rel="stylesheet" />
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="bootstrap.bundle.min.js.map"></script>
+    <script src="jquery-menu-editor.min.js"></script>
+    <script src="fontawesome5-3-1.min.js"></script>
+    <script src="bootstrap-iconpicker.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            // var arrayjson = $('#menujson').val();
+
+            //// menu items
+            var arrayjson = [{ "text": "CẤU TRÚC DỮ LIỆU", "href": "", "icon": "fas fa-database", "target": "_top", "title": "My Home", "children": [{ "text": "Định nghĩa thông tin Nhóm tàu", "icon": "fas fa-ship", "href": "/Ship/AddGroup", "title": "" }, { "text": "Định nghĩa thông tin Model tàu", "icon": "fas fa-ship", "href": "/Ship/AddModel", "title": "" }] }, { "text": "THÔNG TIN TÀU THUYỀN", "href": "", "icon": "fas fa-chart-bar", "target": "_self", "title": "", "children": [{ "text": "Quản lý thông tin của tàu", "icon": "fas fa-info", "href": "/Ship/AddShip", "title": "" }, { "text": "Quản lý sửa chữa", "icon": "fas fa-cog", "href": "/Ship/RepairShip", "title": "" }, { "text": "Quản lý bảo đảm", "icon": "fas fa-cog", "href": "", "title": "" }, { "text": "Quản lý kiểm tra đánh giá chất lượng", "icon": "fas fa-pen", "href": "", "title": "" }] }, { "text": "DANH MỤC DÙNG CHUNG", "href": "", "icon": "fas fa-bell", "target": "_self", "title": "", "children": [{ "text": "Danh mục đơn vị", "icon": "fas fa-user", "href": "/People/Index", "title": "" }, { "text": "Danh mục nhóm tàu", "icon": "fas fa-ship", "href": "/Ship/Index", "title": "" }, { "text": "Danh mục ngành tàu", "icon": "fas fa-ship", "href": "", "title": "" }, { "text": "Danh mục thiết bị", "icon": "fas fa-barcode", "href": "/Equipment/Index", "title": "" }] }, { "text": "HỆ THỐNG", "icon": "fas fa-cog", "href": "", "title": "", "children": [{ "text": "Quản trị menu chức năng", "icon": "fas fa-align-justify", "href": "/System/Menu", "title": "" }, { "text": "Quản trị tham số hệ thống", "icon": "fas fa-desktop", "href": "", "title": "" }, { "text": "Quản trị người dùng", "icon": "fas fa-user-alt", "href": "", "title": "" }, { "text": "Quản lý phản hồi người dùng", "icon": "fas fa-user-alt", "href": "", "title": "" }, { "text": "Quản trị log phần mềm", "icon": "fab fa-product-hunt", "href": "", "title": "" }, { "text": "Sao lưu, phục hồi dữ liệu", "icon": "fas fa-database", "href": "", "title": "" }, { "text": "Quản lý lỗi hệ thống", "icon": "fas fa-save", "href": "", "title": "" }] }, { "text": "TÌM KIẾM", "icon": "fas fa-search", "href": "", "title": "", "children": [{ "text": "Tìm kiếm, tra cứu tàu thuyền", "icon": "fas fa-search", "href": "", "title": "" }, { "text": "Tìm kiếm, tra cứu TBKT", "icon": "fas fa-search", "href": "", "title": "" }] }, { "text": "THỐNG KÊ BÁO CÁO", "icon": "fas fa-book-open", "href": "", "title": "", "children": [{ "text": "Thống kê theo các mẫu biểu", "icon": "fas fa-book-open", "href": "/Report/Report_Ship", "title": "" }, { "text": "Thống kê theo phân cấp đơn vị quản lý", "icon": "fas fa-book-open", "href": "/Report/Report_Equip", "title": "" }] }, { "text": "DỮ LIỆU", "icon": "fas fa-database", "href": "", "title": "", "children": [{ "text": "Export dữ liệu tàu", "icon": "fas fa-database", "href": "", "title": "" }, { "text": "Import dữ liệu tàu", "icon": "fas fa-database", "href": "", "title": "" }, { "text": "Đồng bộ dữ liệu tàu", "icon": "fas fa-database", "href": "", "title": "" }, { "text": "Thống kê dữ liệu", "icon": "fas fa-database", "href": "", "title": "" }, { "text": "Export danh mục", "icon": "fas fa-database", "href": "", "title": "" }, { "text": "Import danh mục", "icon": "fas fa-database", "href": "", "title": "" }] }]
+            // icon picker options
+            var iconPickerOptions = { searchText: "Buscar...", labelHeader: "{0}/{1}" };
+            // sortable list options
+            var sortableListOptions = {
+                placeholderCss: { 'background-color': "#cccccc" }
+            };
+
+            var editor = new MenuEditor('myEditor', { listOptions: sortableListOptions, iconPicker: iconPickerOptions });
+
+            editor.setForm($('#frmEdit'));
+
+            editor.setUpdateButton($('#btnUpdate'));
+
+            editor.setData(arrayjson);
+
+            $('#btnReload').on('click', function () {
+
+                $.ajax({
+                    url: '/System/UpdateMenu',
+                    type: 'POST',
+                    data: {
+                        menu: editor.getString(),
+                    },
+                    success: function (res) {
+                        if (res.status) {
+                            alert('Cập nhật thành công !');
+
+                        }
+                    }
+                })
+            });
+
+            $('#btnOutput').on('click', function () {
+                var str = editor.getString();
+                $("#out").text(str);
+            });
+
+            $("#btnUpdate").click(function () {
+                editor.update();
+            });
+
+            $('#btnAdd').click(function () {
+                editor.add();
+            });
+            /* ====================================== */
+
+            /** PAGE ELEMENTS **/
+            $('[data-toggle="tooltip"]').tooltip();
+            $.getJSON("https://api.github.com/repos/davicotico/jQuery-Menu-Editor", function (data) {
+                $('#btnStars').html(data.stargazers_count);
+                $('#btnForks').html(data.forks_count);
+            });
+        });
+
+    </script>
+  </body>
+</html>
